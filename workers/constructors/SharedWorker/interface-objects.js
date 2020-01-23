@@ -1,7 +1,7 @@
-var prt;
+let prt;
 function handleCall(e) {
-  var log = [];
-  for (var i = 0; i < e.data.length; ++i) {
+  const log = [];
+  for (let i = 0; i < e.data.length; ++i) {
     if (!(e.data[i] in self))
       log.push(e.data[i]);
   }

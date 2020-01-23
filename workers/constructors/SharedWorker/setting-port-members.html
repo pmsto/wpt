@@ -1,11 +1,7 @@
-<!--
-/*
--->
 <!doctype html>
 <title>setting members of worker.port</title>
 <script src="/resources/testharness.js"></script>
 <script src="/resources/testharnessreport.js"></script>
-<div id="log"></div>
 <script>
 setup(function() {
   window.worker = new SharedWorker('#', '');
@@ -23,7 +19,7 @@ test(function() {
   assert_equals(worker.port.close, 1);
 }, 'close');
 test(function() {
-  var f = function(){};
+  const f = function(){};
   worker.port.onmessage = f;
   assert_equals(worker.port.onmessage, f, 'function(){}');
   worker.port.onmessage = 1;
@@ -54,6 +50,3 @@ test(function() {
   assert_equals(worker.port.despatchEvent, 1);
 }, 'despatchEvent');
 </script>
-<!--
-*/
-//-->
