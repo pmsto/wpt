@@ -30,8 +30,7 @@
       a.href = blobURL;
       a.click();
     }
-
-    return new Promise(resolve => {
+    return new Promise((resolve) => {
       window.addEventListener("message", t.step_func(({ data }) => {
         assert_equals(data.id, id);
         assert_equals(data.origin, window.origin);
